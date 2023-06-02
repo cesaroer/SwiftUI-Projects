@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @AppStorage("onboarding") var isOnboardingViewActive: Bool = false
     @State private var isAnimating: Bool = false
+    let hapticFeedback = UINotificationFeedbackGenerator()
 
     var body: some View {
         VStack(spacing: 20) {
@@ -45,6 +46,7 @@ struct HomeView: View {
             Button(action: {
                 withAnimation {
                     playSound(sound: "success", extension: "m4a")
+                    hapticFeedback.notificationOccurred(.success)
                     isOnboardingViewActive = true
                 }
             }) {
@@ -64,7 +66,7 @@ struct HomeView: View {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.6, execute: {
                 isAnimating = true
             })
-        }
+        }.preferredColorScheme(.light)
     }
 }
 
