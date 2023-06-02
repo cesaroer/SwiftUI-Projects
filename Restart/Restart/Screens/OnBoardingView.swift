@@ -15,6 +15,8 @@ struct OnBoardingView: View {
     @State private var imageOffset: CGSize = .zero // same as CGSize(width: 0, height: 0)
     @State private var indicatorOppacity: Double = 1.0
     @State private var textTitle: String = "Share."
+    
+    let hapticFeedback = UINotificationFeedbackGenerator()
 
     var body: some View {
         ZStack {
@@ -134,9 +136,13 @@ struct OnBoardingView: View {
                                     .onEnded({ _ in
                                         withAnimation(Animation.easeOut(duration: 0.4)) {
                                             if buttonOffset > buttonWidth / 2 {
+                                                hapticFeedback.notificationOccurred(.success)
+                                                playSound(sound: "chimeup",
+                                                          extension: "mp3")
                                                 buttonOffset = buttonWidth - 80
                                                 isOnboardingViewActive = false
                                             }else {
+                                                hapticFeedback.notificationOccurred(.error)
                                                 buttonOffset = 0
                                             }
                                         }
@@ -155,6 +161,7 @@ struct OnBoardingView: View {
         .onAppear {
             isAnimating = true
         }
+        .preferredColorScheme(.dark)
     }
 }
 
