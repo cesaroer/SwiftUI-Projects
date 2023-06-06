@@ -59,7 +59,6 @@ struct ContentView: View {
                             }
                         }
                     )
-                
             }
             .navigationTitle("Pinch & Zoom")
             .navigationBarTitleDisplayMode(.inline)
@@ -74,6 +73,56 @@ struct ContentView: View {
                     .padding(.horizontal)
                     .padding(.top, 30)
             }
+            // MARK: -  Controls
+            .overlay (
+                Group {
+                    HStack {
+                        //Scale Down
+                        Button {
+                            withAnimation(.spring()) {
+                                if imageScale > 1 {
+                                    imageScale -= 1
+                                    
+                                    if imageScale <= 1 {
+                                        resetImageState()
+                                    }
+                                }
+                            }
+                        } label: {
+                            ConstrolImageView(icon: "minus.magnifyingglass")
+                        }
+                        
+                        // Reset
+                        
+                        Button {
+                            resetImageState()
+                        } label: {
+                            ConstrolImageView(icon: "arrow.up.left.and.down.right.magnifyingglass")
+                        }
+                        
+                        //Scale Up
+                        Button {
+                            withAnimation(.spring()) {
+                                if imageScale < 5 {
+                                    imageScale += 1
+                                    
+                                    if imageScale > 5 {
+                                        imageScale = 5
+                                    }
+                                }
+                            }
+                        } label: {
+                            ConstrolImageView(icon: "plus.magnifyingglass")
+                        }
+                        
+                    }//: Controls
+                    .padding(EdgeInsets(top: 12, leading: 20, bottom: 12, trailing: 20))
+                    .background(.ultraThinMaterial)
+                    .cornerRadius(12)
+                    .opacity(isAnimating ? 1 : 0)
+                }.padding(.bottom, 30)
+                , alignment: .bottom
+            )
         }.navigationViewStyle(.stack)
     }
 }
