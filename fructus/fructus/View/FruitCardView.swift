@@ -40,6 +40,9 @@ struct FruitCardView: View {
                 StartButtonView()
             }//: VSTACK
         }//: ZSTACK
+        .onDisappear{
+            isAnimating = false
+        }
         .onAppear {
             withAnimation(.easeOut(duration: 0.5)) {
                 isAnimating = true
@@ -54,7 +57,6 @@ struct FruitCardView: View {
                                    startPoint: .top, endPoint: .bottom))
         .cornerRadius(20)
         .padding(.horizontal, 20)
-        .padding(.vertical, 50)
     }
 }
 

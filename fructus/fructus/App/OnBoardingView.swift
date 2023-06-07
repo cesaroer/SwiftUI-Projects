@@ -19,7 +19,6 @@ struct OnBoardingView: View {
         }//: TAB
         .tabViewStyle(PageTabViewStyle())
         .padding(.vertical, 20)
-        
     }
 }
 
