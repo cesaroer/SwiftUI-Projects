@@ -21,6 +21,7 @@
 		A2D73A7A2A316BBA005FB46A /* FruitHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D73A792A316BBA005FB46A /* FruitHeaderView.swift */; };
 		A2D73A7C2A316FE8005FB46A /* SourceLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D73A7B2A316FE8005FB46A /* SourceLinkView.swift */; };
 		A2E7196E2A339227009C6960 /* FruitNutrientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7196D2A339227009C6960 /* FruitNutrientsView.swift */; };
+		A2E719702A3395D9009C6960 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E7196F2A3395D9009C6960 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		A2D73A792A316BBA005FB46A /* FruitHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitHeaderView.swift; sourceTree = "<group>"; };
 		A2D73A7B2A316FE8005FB46A /* SourceLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceLinkView.swift; sourceTree = "<group>"; };
 		A2E7196D2A339227009C6960 /* FruitNutrientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitNutrientsView.swift; sourceTree = "<group>"; };
+		A2E7196F2A3395D9009C6960 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				A2D73A5B2A30EC14005FB46A /* ContentView.swift */,
 				A2D73A6D2A30F791005FB46A /* OnBoardingView.swift */,
 				A2D73A772A31688F005FB46A /* FruitDetalView.swift */,
+				A2E7196F2A3395D9009C6960 /* SettingsView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				A2D73A5C2A30EC14005FB46A /* ContentView.swift in Sources */,
 				A2D73A6E2A30F791005FB46A /* OnBoardingView.swift in Sources */,
 				A2D73A5A2A30EC14005FB46A /* fructusApp.swift in Sources */,
+				A2E719702A3395D9009C6960 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
