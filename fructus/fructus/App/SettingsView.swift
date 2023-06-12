@@ -10,7 +10,7 @@ import SwiftUI
 struct SettingsView: View {
     
     @Environment(\.presentationMode) var presentationMode
-    
+    @AppStorage("isOnBoarding") var isOnBoarding: Bool = false
     
     var body: some View {
         NavigationView {
@@ -38,6 +38,36 @@ struct SettingsView: View {
                     }
                     
                     // MARK: -  section 2
+                    GroupBox {
+                        Divider().padding(.vertical, 4)
+                        Text("If you wish you can switch here, by switching the switch jeje, and more more more texto text blah blah blah, thanks")
+                            .padding(.vertical, 8)
+                            .frame(minWidth: 60)
+                            .layoutPriority(1)
+                            .font(.footnote)
+                            .multilineTextAlignment(.leading)
+                        
+                        
+                        Toggle(isOn: $isOnBoarding) {
+                            if isOnBoarding {
+                                Text("Restarted".uppercased())
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.green)
+                            } else {
+                                Text("Restart".uppercased())
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.secondary)
+                            }
+                        }
+                        .padding()
+                        .background(
+                            Color(uiColor: UIColor.tertiarySystemBackground)
+                                .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+                        )
+                        
+                    } label: {
+                        SettingsLabelView(labelText: "Customization", labelImage: "paintbrush")
+                    }
 
                     
                     // MARK: -  section 3
