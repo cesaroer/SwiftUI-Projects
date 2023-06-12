@@ -10,7 +10,7 @@ import SwiftUI
 struct SettingsView: View {
     
     @Environment(\.presentationMode) var presentationMode
-    @AppStorage("isOnBoarding") var isOnBoarding: Bool = false
+    @AppStorage("isOnboarding") var isOnboarding: Bool = true
     
     var body: some View {
         NavigationView {
@@ -48,8 +48,8 @@ struct SettingsView: View {
                             .multilineTextAlignment(.leading)
                         
                         
-                        Toggle(isOn: $isOnBoarding) {
-                            if isOnBoarding {
+                        Toggle(isOn: $isOnboarding) {
+                            if isOnboarding {
                                 Text("Restarted".uppercased())
                                     .fontWeight(.bold)
                                     .foregroundColor(.green)
