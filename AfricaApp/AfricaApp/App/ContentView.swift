@@ -25,12 +25,13 @@ struct ContentView: View {
                     } label: {
                         AnimalListItemView(animal: animal)
                     }
+                    
+                    .listRowBackground(Color.black)
                 }
             }
             .navigationTitle("Africa")
             .navigationBarTitleDisplayMode(.large)
         }
-
     }
 }
 

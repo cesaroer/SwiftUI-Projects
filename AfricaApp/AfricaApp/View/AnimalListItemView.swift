@@ -37,7 +37,7 @@ struct AnimalListItemView: View {
           .padding(.trailing, 8)
       } //: VSTACK
     } //: HSTACK
-    .listRowBackground(Color.clear)
+    .background(.black)
   }
 }
 
