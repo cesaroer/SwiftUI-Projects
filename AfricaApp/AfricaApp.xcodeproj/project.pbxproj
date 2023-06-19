@@ -51,7 +51,7 @@
 		A2380C442A3CD2D9008C5117 /* MapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2380C432A3CD2D9008C5117 /* MapAnnotationView.swift */; };
 		A2380C462A3CD438008C5117 /* MotionAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2380C452A3CD438008C5117 /* MotionAnimationView.swift */; };
 		A2380C4C2A3CD934008C5117 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2380C4B2A3CD934008C5117 /* Stickers.xcassets */; };
-		A2380C502A3CD934008C5117 /* Stickets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A2380C492A3CD932008C5117 /* Stickets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A2380C502A3CD934008C5117 /* Stickets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A2380C492A3CD932008C5117 /* Stickets.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +127,7 @@
 		A2380C492A3CD932008C5117 /* Stickets.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Stickets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2380C4B2A3CD934008C5117 /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
 		A2380C4D2A3CD934008C5117 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A29F5E772A40DAFA00E240F1 /* AfricaApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AfricaApp.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +162,7 @@
 		A20B98522A37E94600612B82 /* AfricaApp */ = {
 			isa = PBXGroup;
 			children = (
+				A29F5E772A40DAFA00E240F1 /* AfricaApp.entitlements */,
 				A21A28342A40D79900BA40DD /* Modifier */,
 				A2380C3E2A3CCF92008C5117 /* Helper */,
 				A20B988B2A37F07200612B82 /* Data */,
@@ -438,6 +440,7 @@
 /* Begin PBXTargetDependency section */
 		A2380C4F2A3CD934008C5117 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = A2380C482A3CD932008C5117 /* Stickets */;
 			targetProxy = A2380C4E2A3CD934008C5117 /* PBXContainerItemProxy */;
 		};
@@ -563,6 +566,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AfricaApp/AfricaApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AfricaApp/Preview Content\"";
@@ -582,6 +586,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = CesarV.AfricaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -593,6 +600,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AfricaApp/AfricaApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AfricaApp/Preview Content\"";
@@ -612,6 +620,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = CesarV.AfricaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -632,6 +643,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = CesarV.AfricaApp.Stickets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -651,6 +663,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = CesarV.AfricaApp.Stickets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
