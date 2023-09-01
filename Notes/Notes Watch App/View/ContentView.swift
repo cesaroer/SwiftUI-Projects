@@ -80,14 +80,19 @@ struct ContentView: View {
             Spacer()
             if notes.count >= 1 {
                 List {
-                    ForEach(notes) { note in
-                        HStack {
-                          Capsule()
-                            .frame(width: 4)
-                            .foregroundColor(.accentColor)
-                          Text(note.text)
-                            .lineLimit(1)
-                            .padding(.leading, 5)
+                    ForEach(Array(notes.enumerated()), id: \.offset) { index, note in
+                        let detail = DetailView(note:note,
+                                                count: notes.count,
+                                                index: index)
+                        NavigationLink(destination: detail) {
+                            HStack {
+                              Capsule()
+                                .frame(width: 4)
+                                .foregroundColor(.accentColor)
+                              Text(note.text)
+                                .lineLimit(1)
+                                .padding(.leading, 5)
+                            }
                         }
                     }.onDelete(perform: delete)
                 }

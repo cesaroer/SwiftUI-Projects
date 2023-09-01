@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A21FA76A2AA2A1C70062FF49 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21FA7692AA2A1C70062FF49 /* DetailView.swift */; };
 		A263247C2A9BF7E800AAA796 /* Notes Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A263247B2A9BF7E800AAA796 /* Notes Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A26324812A9BF7E800AAA796 /* NotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26324802A9BF7E800AAA796 /* NotesApp.swift */; };
 		A26324832A9BF7E800AAA796 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26324822A9BF7E800AAA796 /* ContentView.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A21FA7692AA2A1C70062FF49 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		A26324752A9BF7E800AAA796 /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A263247B2A9BF7E800AAA796 /* Notes Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Notes Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A26324802A9BF7E800AAA796 /* NotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesApp.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				A26324822A9BF7E800AAA796 /* ContentView.swift */,
+				A21FA7692AA2A1C70062FF49 /* DetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A26324832A9BF7E800AAA796 /* ContentView.swift in Sources */,
+				A21FA76A2AA2A1C70062FF49 /* DetailView.swift in Sources */,
 				A2E2A8502AA0502A00180222 /* NoteModel.swift in Sources */,
 				A26324812A9BF7E800AAA796 /* NotesApp.swift in Sources */,
 			);
