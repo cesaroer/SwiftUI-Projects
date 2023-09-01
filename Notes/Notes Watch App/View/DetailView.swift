@@ -34,6 +34,12 @@ struct DetailView: View {
             HStack(alignment: .center) {
                 Image(systemName: "gear")
                     .imageScale(.large)
+                    .onTapGesture {
+                        isSettingsPresented.toggle()
+                    }
+                    .sheet(isPresented: $isSettingsPresented) {
+                        SettingsView()
+                    }
                 
                 Spacer()
                 Text(" \(index + 1) /\(count)")
