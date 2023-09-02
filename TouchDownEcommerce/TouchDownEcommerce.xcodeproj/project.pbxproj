@@ -21,6 +21,10 @@
 		A21BD0342AA2B270005F8054 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BD0332AA2B270005F8054 /* FooterView.swift */; };
 		A2E469E42AA3D61F003D03A2 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E469E32AA3D61F003D03A2 /* NavigationBarView.swift */; };
 		A2E469E62AA3D769003D03A2 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E469E52AA3D769003D03A2 /* LogoView.swift */; };
+		A2E469E82AA3DB01003D03A2 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E469E72AA3DB01003D03A2 /* PlayerModel.swift */; };
+		A2E469EA2AA3DB35003D03A2 /* CodableBundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E469E92AA3DB35003D03A2 /* CodableBundleExtension.swift */; };
+		A2E469EC2AA3DBD8003D03A2 /* FeaturedItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E469EB2AA3DBD8003D03A2 /* FeaturedItemView.swift */; };
+		A2E469EE2AA3DC3D003D03A2 /* FeatureTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E469ED2AA3DC3D003D03A2 /* FeatureTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		A21BD0332AA2B270005F8054 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		A2E469E32AA3D61F003D03A2 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		A2E469E52AA3D769003D03A2 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		A2E469E72AA3DB01003D03A2 /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlayerModel.swift; path = TouchDownEcommerce/View/Home/PlayerModel.swift; sourceTree = SOURCE_ROOT; };
+		A2E469E92AA3DB35003D03A2 /* CodableBundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CodableBundleExtension.swift; path = TouchDownEcommerce/View/Home/CodableBundleExtension.swift; sourceTree = SOURCE_ROOT; };
+		A2E469EB2AA3DBD8003D03A2 /* FeaturedItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItemView.swift; sourceTree = "<group>"; };
+		A2E469ED2AA3DC3D003D03A2 /* FeatureTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +136,8 @@
 				A21BD0332AA2B270005F8054 /* FooterView.swift */,
 				A2E469E32AA3D61F003D03A2 /* NavigationBarView.swift */,
 				A2E469E52AA3D769003D03A2 /* LogoView.swift */,
+				A2E469EB2AA3DBD8003D03A2 /* FeaturedItemView.swift */,
+				A2E469ED2AA3DC3D003D03A2 /* FeatureTabView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -142,6 +152,7 @@
 		A21BD02A2AA2B1A6005F8054 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A2E469E72AA3DB01003D03A2 /* PlayerModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -149,6 +160,7 @@
 		A21BD02B2AA2B1AE005F8054 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				A2E469E92AA3DB35003D03A2 /* CodableBundleExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -238,8 +250,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A21BD0302AA2B230005F8054 /* CustomShape.swift in Sources */,
+				A2E469EE2AA3DC3D003D03A2 /* FeatureTabView.swift in Sources */,
 				A21BD0112AA2AFB1005F8054 /* ContentView.swift in Sources */,
 				A21BD00F2AA2AFB1005F8054 /* TouchDownEcommerceApp.swift in Sources */,
+				A2E469E82AA3DB01003D03A2 /* PlayerModel.swift in Sources */,
+				A2E469EA2AA3DB35003D03A2 /* CodableBundleExtension.swift in Sources */,
+				A2E469EC2AA3DBD8003D03A2 /* FeaturedItemView.swift in Sources */,
 				A21BD0342AA2B270005F8054 /* FooterView.swift in Sources */,
 				A21BD0322AA2B244005F8054 /* Shop.swift in Sources */,
 				A2E469E62AA3D769003D03A2 /* LogoView.swift in Sources */,
