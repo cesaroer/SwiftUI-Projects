@@ -19,6 +19,8 @@
 		A21BD0302AA2B230005F8054 /* CustomShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BD02F2AA2B230005F8054 /* CustomShape.swift */; };
 		A21BD0322AA2B244005F8054 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BD0312AA2B244005F8054 /* Shop.swift */; };
 		A21BD0342AA2B270005F8054 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BD0332AA2B270005F8054 /* FooterView.swift */; };
+		A2E469E42AA3D61F003D03A2 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E469E32AA3D61F003D03A2 /* NavigationBarView.swift */; };
+		A2E469E62AA3D769003D03A2 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E469E52AA3D769003D03A2 /* LogoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		A21BD02F2AA2B230005F8054 /* CustomShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomShape.swift; sourceTree = "<group>"; };
 		A21BD0312AA2B244005F8054 /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		A21BD0332AA2B270005F8054 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		A2E469E32AA3D61F003D03A2 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
+		A2E469E52AA3D769003D03A2 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				A21BD0332AA2B270005F8054 /* FooterView.swift */,
+				A2E469E32AA3D61F003D03A2 /* NavigationBarView.swift */,
+				A2E469E52AA3D769003D03A2 /* LogoView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -236,6 +242,8 @@
 				A21BD00F2AA2AFB1005F8054 /* TouchDownEcommerceApp.swift in Sources */,
 				A21BD0342AA2B270005F8054 /* FooterView.swift in Sources */,
 				A21BD0322AA2B244005F8054 /* Shop.swift in Sources */,
+				A2E469E62AA3D769003D03A2 /* LogoView.swift in Sources */,
+				A2E469E42AA3D61F003D03A2 /* NavigationBarView.swift in Sources */,
 				A21BD02E2AA2B1FB005F8054 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
