@@ -1,8 +1,7 @@
 //
-//  PlayerModel.swift
-//  TouchDownEcommerce
-//
-//  Created by Cesar Vargas Tapia on 02/09/23.
+//  Created by Robert Petras
+//  Credo Academy ♥ Design and Code
+//  https://credo.academy
 //
 
 import Foundation
