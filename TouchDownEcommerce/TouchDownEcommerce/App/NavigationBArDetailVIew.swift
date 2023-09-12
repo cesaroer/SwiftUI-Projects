@@ -19,8 +19,8 @@ struct NavigationBarDetailView: View {
       Button(action: {
         withAnimation(.easeIn) {
           feedback.impactOccurred()
-           // $shop.selectedProduct = nil
-          shop.showingProduct = false
+            shop.selectedProduct = nil
+            shop.showingProduct = false
         }
       }, label: {
         Image(systemName: "chevron.left")

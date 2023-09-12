@@ -25,9 +25,9 @@ struct AddToCArtDetailView: View {
         .padding(15)
         .background(
           Color(
-            red: sampleProduct.red,
-            green: sampleProduct.green,
-            blue:  sampleProduct.blue
+            red: shop.selectedProduct?.red ?? sampleProduct.red,
+            green: shop.selectedProduct?.green ?? sampleProduct.green,
+            blue: shop.selectedProduct?.blue ?? sampleProduct.blue
           )
         )
         .clipShape(Capsule())
@@ -37,6 +37,7 @@ struct AddToCArtDetailView: View {
 struct AddToCArtDetailView_Previews: PreviewProvider {
     static var previews: some View {
         AddToCArtDetailView()
+            .environmentObject(Shop())
             .previewLayout(.sizeThatFits)
             .padding()
     }
