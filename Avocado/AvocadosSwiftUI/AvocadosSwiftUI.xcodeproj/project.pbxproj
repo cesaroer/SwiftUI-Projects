@@ -11,6 +11,7 @@
 		A218D50A2AD50E6000D78625 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A218D5092AD50E6000D78625 /* ContentView.swift */; };
 		A218D50C2AD50E6200D78625 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A218D50B2AD50E6200D78625 /* Assets.xcassets */; };
 		A218D50F2AD50E6200D78625 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A218D50E2AD50E6200D78625 /* Preview Assets.xcassets */; };
+		A2DB32672B646C4100E761C0 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2DB32662B646C4100E761C0 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		A218D5092AD50E6000D78625 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A218D50B2AD50E6200D78625 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A218D50E2AD50E6200D78625 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A2DB32662B646C4100E761C0 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				A218D5072AD50E6000D78625 /* AvocadosSwiftUIApp.swift */,
 				A218D5092AD50E6000D78625 /* ContentView.swift */,
+				A2DB32662B646C4100E761C0 /* Launch Screen.storyboard */,
 				A218D50B2AD50E6200D78625 /* Assets.xcassets */,
 				A218D50D2AD50E6200D78625 /* Preview Content */,
 			);
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2DB32672B646C4100E761C0 /* Launch Screen.storyboard in Resources */,
 				A218D50F2AD50E6200D78625 /* Preview Assets.xcassets in Resources */,
 				A218D50C2AD50E6200D78625 /* Assets.xcassets in Resources */,
 			);
