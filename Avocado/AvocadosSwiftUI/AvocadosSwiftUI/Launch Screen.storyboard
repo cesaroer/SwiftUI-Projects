@@ -21,11 +21,12 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="j4Z-Mi-F0p">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="folder.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="j4Z-Mi-F0p">
+                                <rect key="frame" x="0.0" y="1.6666666666666856" width="393" height="849"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avocado" translatesAutoresizingMaskIntoConstraints="NO" id="p2w-1R-ME9">
-                                <rect key="frame" x="76.666666666666686" y="271" width="240" height="240"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.up.bin.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="p2w-1R-ME9">
+                                <rect key="frame" x="76.666666666666686" y="272.66666666666669" width="240" height="236.99999999999994"/>
+                                <color key="tintColor" red="0.9098039269" green="0.90588235859999999" blue="0.74901962280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="4ep-8X-Fq2"/>
                                     <constraint firstAttribute="width" constant="240" id="Aah-gE-nUL"/>
@@ -61,7 +62,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="avocado" width="883" height="862"/>
-        <image name="background" width="1194" height="834"/>
+        <image name="arrow.up.bin.fill" catalog="system" width="128" height="92"/>
+        <image name="folder.fill" catalog="system" width="128" height="96"/>
     </resources>
 </document>
