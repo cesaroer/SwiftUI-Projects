@@ -13,10 +13,12 @@ struct ContentView: View {
             HeaderView()
             
             Spacer()
-            CardView(honeymoon: honeymoonData[0])
+            CardView(honeymoon: honeymoonData[2])
                 .padding()
             
             Spacer()
+            
+            FooterView()
         }
     }
 }
