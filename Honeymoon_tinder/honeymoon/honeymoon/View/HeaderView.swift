@@ -2,8 +2,8 @@ import SwiftUI
 
 struct HeaderView: View {
   // MARK: - PROPERTIES
-  //@Binding var showGuideView: Bool
-  //@Binding var showInfoView: Bool
+  @Binding var showGuideView: Bool
+  @Binding var showInfoView: Bool
   let haptics = UINotificationFeedbackGenerator()
   
   var body: some View {
@@ -12,15 +12,15 @@ struct HeaderView: View {
         // ACTION
         playSound(sound: "sound-click", type: "mp3")
         self.haptics.notificationOccurred(.success)
-        //self.showInfoView.toggle()
+        self.showInfoView.toggle()
       }) {
         Image(systemName: "info.circle")
           .font(.system(size: 24, weight: .regular))
       }
       .accentColor(Color.primary)
-      //.sheet(isPresented: $showInfoView) {
-      //  InfoView()
-      //}
+      .sheet(isPresented: $showInfoView) {
+        InfoView()
+      }
       
       Spacer()
       
@@ -35,27 +35,26 @@ struct HeaderView: View {
         // ACTION
         playSound(sound: "sound-click", type: "mp3")
         self.haptics.notificationOccurred(.success)
-        //self.showGuideView.toggle()
+        self.showGuideView.toggle()
       }) {
         Image(systemName: "questionmark.circle")
           .font(.system(size: 24, weight: .regular))
       }
       .accentColor(Color.primary)
-      //.sheet(isPresented: $showGuideView) {
-      //  GuideView()
-      //}
+      .sheet(isPresented: $showGuideView) {
+        GuideView()
+      }
     }
     .padding()
   }
 }
 
 struct HeaderView_Previews: PreviewProvider {
-  //@State static var showGuide: Bool = false
-  //@State static var showInfo: Bool = false
+  @State static var showGuide: Bool = false
+  @State static var showInfo: Bool = false
   
   static var previews: some View {
-   // HeaderView(showGuideView: $showGuide, showInfoView: $showInfo)
-      HeaderView()
+    HeaderView(showGuideView: $showGuide, showInfoView: $showInfo)
       .previewLayout(.fixed(width: 375, height: 80))
   }
 }
