@@ -2,7 +2,7 @@ import SwiftUI
 
 struct FooterView: View {
     // MARK: - PROPERTIES
-    //@Binding var showBookingAlert: Bool
+    @Binding var showBookingAlert: Bool
     let haptics = UINotificationFeedbackGenerator()
 
     var body: some View {
@@ -16,7 +16,7 @@ struct FooterView: View {
                 // ACTION
                 playSound(sound: "sound-click", type: "mp3")
                 self.haptics.notificationOccurred(.success)
-                //self.showBookingAlert.toggle()
+                self.showBookingAlert.toggle()
             }) {
                 Text("Book Destination".uppercased())
                     .font(.system(.subheadline, design: .rounded))
@@ -40,11 +40,10 @@ struct FooterView: View {
 }
 
 struct FooterView_Previews: PreviewProvider {
-    //@State static var showAlert: Bool = false
+    @State static var showAlert: Bool = false
 
     static var previews: some View {
-        //FooterView(showBookingAlert: $showAlert)
-        FooterView()
+        FooterView(showBookingAlert: $showAlert)
             .previewLayout(.fixed(width: 375, height: 80))
     }
 }
