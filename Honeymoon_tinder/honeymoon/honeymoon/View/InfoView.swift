@@ -13,19 +13,19 @@ struct InfoView: View {
   var body: some View {
     ScrollView(.vertical, showsIndicators: false) {
       VStack(alignment: .center, spacing: 20) {
-        //HeaderComponent()
+        HeaderComponent()
         
         Spacer(minLength: 10)
         
         Text("App Info")
           .fontWeight(.black)
-          //.modifier(TitleModifier())
+          .modifier(TitleModifier())
         
         AppInfoView()
         
         Text("Credits")
           .fontWeight(.black)
-          //.modifier(TitleModifier())
+          .modifier(TitleModifier())
         
         CreditsView()
         
@@ -37,7 +37,7 @@ struct InfoView: View {
           self.presentationMode.wrappedValue.dismiss()
         }) {
           Text("Continue".uppercased())
-           // .modifier(ButtonModifier())
+            .modifier(ButtonModifier())
         }
       }
       .frame(minWidth: 0, maxWidth: .infinity)
