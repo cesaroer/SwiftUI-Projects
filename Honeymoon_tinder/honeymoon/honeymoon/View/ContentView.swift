@@ -11,14 +11,34 @@ struct ContentView: View {
     @State var showAlert: Bool = false
     @State var showGuide: Bool = false
     @State var showInfo: Bool = false
+    
+    // MARK: -  CArd Views
+    var cardViews: [CardView] = {
+        return honeymoonData.prefix(2).map { CardView(honeymoon: $0) }
+    }()
+
+    // MARK: -  Top Card
+    private func isTopCard(cardView: CardView) -> Bool {
+        guard let index = cardViews.firstIndex(where: { $0.id == cardView.id }) else {
+            return false
+        }
+        
+        return index == 0
+    }
 
     var body: some View {
         VStack {
             HeaderView(showGuideView: $showGuide, showInfoView: $showInfo)
             
             Spacer()
-            CardView(honeymoon: honeymoonData[2])
-                .padding()
+            // MARK: -  CARDS
+            ZStack(alignment: .topLeading) {
+                ForEach(cardViews) { cardView in
+                    cardView
+                        .zIndex(self.isTopCard(cardView: cardView) ? 1 : 0)
+                }
+            }
+            .padding(.horizontal)
             
             Spacer()
             
