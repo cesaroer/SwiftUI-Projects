@@ -46,10 +46,21 @@ struct ContentView: View {
     @State var showInfo: Bool = false
     @GestureState private var dragState = DragState.inactive
     private var dragAreaThreshold: CGFloat = 65.0
+    @State private var lastCardIndex: Int = 1
+
     // MARK: -  CArd Views
-    var cardViews: [CardView] = {
+    @State var cardViews: [CardView] = {
         return honeymoonData.prefix(2).map { CardView(honeymoon: $0) }
     }()
+
+    // MARK: -  Move Card
+    private func moveCards() {
+        cardViews.removeFirst()
+        self.lastCardIndex += 1
+        let hm = honeymoonData[lastCardIndex % honeymoonData.count]
+        let newCardView = CardView(honeymoon: hm)
+        cardViews.append(newCardView)
+    }
 
     // MARK: -  Top Card
     private func isTopCard(cardView: CardView) -> Bool {
@@ -89,16 +100,26 @@ struct ContentView: View {
                         .gesture(
                             LongPressGesture(minimumDuration: 0.01)
                                 .sequenced(before: DragGesture())
-                                .updating(self.$dragState) { value, state, transaction in
-                                    switch value {
-                                    case .first(true):
-                                        state = .pressing
-                                    case .second(true, let drag):
-                                        state = .dragging(translation: drag?.translation ?? .zero)
-                                    default:
-                                        break
+                                .updating(self.$dragState, body: { (value, state, transaction) in
+                                  switch value {
+                                  case .first(true):
+                                    state = .pressing
+                                  case .second(true, let drag):
+                                    state = .dragging(translation: drag?.translation ?? .zero)
+                                  default:
+                                    break
+                                  }
+                                }).onEnded({ (value) in
+                                    guard case .second(true, let drag?) = value else {
+                                      return
                                     }
-                        })
+                                    
+                                    if drag.translation.width < -self.dragAreaThreshold || drag.translation.width > self.dragAreaThreshold {
+                                      playSound(sound: "sound-rise", type: "mp3")
+                                      self.moveCards()
+                                    }
+                                  })
+                        )
                 }
             }
             .padding(.horizontal)
