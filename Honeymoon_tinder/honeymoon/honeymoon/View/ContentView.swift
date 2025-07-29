@@ -45,9 +45,10 @@ struct ContentView: View {
     @State var showGuide: Bool = false
     @State var showInfo: Bool = false
     @GestureState private var dragState = DragState.inactive
-    private var dragAreaThreshold: CGFloat = 65.0
+    private var dragAreaThreshold: CGFloat = 75.0
     @State private var lastCardIndex: Int = 1
     @State private var cardRemovalTransition = AnyTransition.trailingBottom
+    @State private var isCardBeingRemoved: Bool = false
 
     // MARK: -  CArd Views
     @State var cardViews: [CardView] = {
@@ -97,6 +98,11 @@ struct ContentView: View {
                         .offset(x: self.isTopCard(cardView: cardView) ? self.dragState.translation.width : 0, y: self.isTopCard(cardView: cardView) ?  self.dragState.translation.height : 0)
                         .scaleEffect(self.dragState.isDragging && self.isTopCard(cardView: cardView) ? 0.85 : 1.0)
                         .rotationEffect(Angle(degrees: self.isTopCard(cardView: cardView) ? (self.dragState.translation.width / 12) : 0 ))
+                        .opacity(
+                            self.isTopCard(cardView: cardView) &&
+                            (abs(self.dragState.translation.width) > self.dragAreaThreshold || self.isCardBeingRemoved)
+                            ? 0.5 : 1.0
+                        )
                         .animation(.interpolatingSpring(stiffness: 120, damping: 120))
                         .gesture(
                             LongPressGesture(minimumDuration: 0.01)
@@ -128,10 +134,16 @@ struct ContentView: View {
                                     guard case .second(true, let drag?) = value else {
                                       return
                                     }
-                                    
+                                                                        
                                     if drag.translation.width < -self.dragAreaThreshold || drag.translation.width > self.dragAreaThreshold {
                                       playSound(sound: "sound-rise", type: "mp3")
-                                      self.moveCards()
+                                        
+                                        self.isCardBeingRemoved = true
+
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+                                            self.moveCards()
+                                            self.isCardBeingRemoved = false
+                                        }
                                     }
                                   })
                         ).transition(self.cardRemovalTransition)
