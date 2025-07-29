@@ -45,7 +45,7 @@ struct ContentView: View {
     @State var showGuide: Bool = false
     @State var showInfo: Bool = false
     @GestureState private var dragState = DragState.inactive
-    
+    private var dragAreaThreshold: CGFloat = 65.0
     // MARK: -  CArd Views
     var cardViews: [CardView] = {
         return honeymoonData.prefix(2).map { CardView(honeymoon: $0) }
@@ -71,6 +71,17 @@ struct ContentView: View {
                 ForEach(cardViews) { cardView in
                     cardView
                         .zIndex(self.isTopCard(cardView: cardView) ? 1 : 0)
+                        .overlay(content: {
+                            ZStack {
+                                Image(systemName: "x.circle")
+                                    .modifier(SymbolModifier())
+                                    .opacity(self.dragState.translation.width < -self.dragAreaThreshold && self.isTopCard(cardView: cardView) ? 1.0 : 0)
+                                
+                                Image(systemName: "heart.circle")
+                                    .modifier(SymbolModifier())
+                                    .opacity(self.dragState.translation.width  > self.dragAreaThreshold && self.isTopCard(cardView: cardView) ? 1.0 : 0)
+                            }
+                        })
                         .offset(x: self.isTopCard(cardView: cardView) ? self.dragState.translation.width : 0, y: self.isTopCard(cardView: cardView) ?  self.dragState.translation.height : 0)
                         .scaleEffect(self.dragState.isDragging && self.isTopCard(cardView: cardView) ? 0.85 : 1.0)
                         .rotationEffect(Angle(degrees: self.isTopCard(cardView: cardView) ? (self.dragState.translation.width / 12) : 0 ))
