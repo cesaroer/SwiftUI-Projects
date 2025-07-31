@@ -6,16 +6,26 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
+    // MARK: -  Properties
+    @Environment(\.modelContext) var modelContext
+    @Query private var movies: [Movie]
+    
+    @State private var isSheetPresented: Bool = false
+    @State private var randomMovie: String = ""
+    @State private var isShowingAlert: Bool = false
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        List {
+            
         }
-        .padding()
+        .overlay {
+            if movies.isEmpty {
+                EmptyListView()
+            }
+        }
     }
 }
 
